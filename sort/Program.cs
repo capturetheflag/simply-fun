@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Sort
+namespace LargeFileSort
 {
     class Program
     {
@@ -9,11 +9,10 @@ namespace Sort
 
         static void Main(string[] args)
         {
-            var inputFileStream = File.Open(FilePath, FileMode.Open);
-          
-            var mergeSort = new MergeSort();
-            mergeSort.Sort(inputFileStream);
-            inputFileStream.Close();
+            using (var inputFileStream = File.Open(FilePath, FileMode.Open))
+            {   
+                new ExternalSort().Sort(inputFileStream);
+            }
         }
     }
 }

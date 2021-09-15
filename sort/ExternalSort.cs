@@ -2,9 +2,9 @@ using System;
 using System.IO;
 using System.Linq;
 
-namespace Sort
+namespace LargeFileSort
 {
-    public class MergeSort
+    public class ExternalSort
     {
         public const int ChunkSize = 4;
 
