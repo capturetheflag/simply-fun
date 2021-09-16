@@ -81,6 +81,12 @@ namespace LargeFileSort
     }
 }
 
-// O(N * log(K)) - sort chunks
-// O(N * K) - find min number N times in a buffer of size K
-// O(N * K + N * log(K))
+// Time Complexity
+// K - chunk size, N - numbers in a file
+// N / K - total number of chunks
+
+// K * log(K) - sort one chunk of size K
+// O(N * log(K)) - sort all chunks
+// O(N * K) - find the minimum number N times in an array buffer of size K
+// O((N * K) + (N * log(K)))
+// O(N * K)
